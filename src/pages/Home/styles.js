@@ -1,6 +1,29 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { darken } from 'polished';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+export const LoadingContainer = styled.div`
+display:flex;
+justify-content:center;
+align-items:center;
+`
+export const LoadingIcon = styled(AiOutlineLoading3Quarters)`
+color:#7FFFD4;
+animation: ${rotate} 1s cubic-bezier(0.8, 0.5, 0.6, 0.8) infinite;
+}
+;
+
+`
 export const ProductList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
