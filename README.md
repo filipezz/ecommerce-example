@@ -14,7 +14,7 @@
 -  [styled-components](https://www.styled-components.com/)
 -  [React-Icons](https://react-icons.netlify.com/)
 -  [Reactotron](https://infinite.red/reactotron)
--
+
 
 ## :information_source: Como usar
 
