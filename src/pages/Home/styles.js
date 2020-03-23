@@ -1,29 +1,16 @@
 import styled, { keyframes } from 'styled-components';
 import { darken } from 'polished';
-import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 
-
-const rotate = keyframes`
+const blink = keyframes`
   from {
-    transform: rotate(0deg);
+    opacity: 0.7;
   }
 
   to {
-    transform: rotate(360deg);
+    opacity: 0.5;
   }
 `;
-export const LoadingContainer = styled.div`
-display:flex;
-justify-content:center;
-align-items:center;
-`
-export const LoadingIcon = styled(AiOutlineLoading3Quarters)`
-color:#7FFFD4;
-animation: ${rotate} 1s cubic-bezier(0.8, 0.5, 0.6, 0.8) infinite;
-}
-;
 
-`
 export const ProductList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -83,6 +70,60 @@ export const ProductList = styled.ul`
         text-align: center;
         font-weight: bold;
       }
+    }
+  }
+`;
+
+export const SkeletonItem = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  list-style: none;
+  animation: ${blink} 0.8s ease-in-out alternate  infinite;
+}
+
+  padding: 20px;
+
+  li {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 4px;
+    padding: 20px;
+    height: 426px;
+
+    div {
+      align-self: center;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+    }
+    summary {
+      align-self: center;
+      margin-top: 10px;
+      width: 250px;
+      height: 25px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.4);
+    }
+    mark {
+      align-self: flex-start;
+      margin-left: 4px;
+      margin-top: 10px;
+      width: 100px;
+      height: 25px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.4);
+    }
+    footer {
+      align-self: flex-start;
+      margin-left: 4px;
+      margin-top: auto;
+      width: 250px;
+      height: 35px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.4);
     }
   }
 `;
