@@ -13,7 +13,7 @@ const blink = keyframes`
 
 export const ProductList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   list-style: none;
 
@@ -76,7 +76,7 @@ export const ProductList = styled.ul`
 
 export const SkeletonItem = styled.ul`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   list-style: none;
   animation: ${blink} 0.8s ease-in-out alternate  infinite;
