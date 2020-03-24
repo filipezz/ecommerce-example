@@ -3,7 +3,7 @@ import { darken } from 'polished';
 
 const blink = keyframes`
   from {
-    opacity: 0.7;
+    opacity: 0.8;
   }
 
   to {
@@ -79,41 +79,39 @@ export const SkeletonItem = styled.ul`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   list-style: none;
-  animation: ${blink} 0.8s ease-in-out alternate  infinite;
-}
-
-  padding: 20px;
+  animation: ${blink} 0.8s ease-in-out alternate infinite;
 
   li {
     display: flex;
     flex-direction: column;
-
     border-radius: 4px;
     padding: 20px;
     height: 426px;
+    background: rgba(255, 255, 255, 0.4);
 
     div {
       align-self: center;
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.3);
+      z-index: 1;
     }
     summary {
-      align-self: center;
+      align-self: flex-start;
       margin-top: 10px;
       width: 250px;
       height: 25px;
-      border-radius: 10px;
+      border-radius: 4px;
       background: rgba(255, 255, 255, 0.4);
     }
     mark {
       align-self: flex-start;
-      margin-left: 4px;
-      margin-top: 10px;
+
+      margin-top: 7px;
       width: 100px;
       height: 25px;
-      border-radius: 10px;
+      border-radius: 4px;
       background: rgba(255, 255, 255, 0.4);
     }
     footer {
@@ -122,7 +120,7 @@ export const SkeletonItem = styled.ul`
       margin-top: auto;
       width: 250px;
       height: 35px;
-      border-radius: 10px;
+      border-radius: 15px;
       background: rgba(255, 255, 255, 0.4);
     }
   }

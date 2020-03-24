@@ -27,8 +27,37 @@ export const Container = styled.div`
     }
   }
 `;
+export const EmptyCart = styled.div`
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.7;
 
+  button {
+    background: #f31431;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-weight: bold;
+    width: 180px;
+    height: 50px;
+    text-transform: uppercase;
+    transition: background 0.2s;
+    margin-top: 15px;
+
+    &:hover {
+      background: ${darken(0.04, '#F31431')};
+    }
+  }
+`;
 export const ProductTable = styled.table`
+  table-layout: fixed;
   width: 100%;
 
   thead th {
@@ -69,6 +98,14 @@ export const ProductTable = styled.table`
     background: none;
     border: 0;
     padding: 6px;
+  }
+  @media (max-width: 768px) {
+    th:last-of-type {
+      display: none;
+    }
+    th:first-of-type {
+      display: none;
+    }
   }
 `;
 
