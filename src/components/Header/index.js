@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <Container>
       <Link to="/">
-        <h1>Loja da Nike</h1>
+        <h1>E-commerce</h1>
       </Link>
 
       <Cart to="cart">
