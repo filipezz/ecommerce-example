@@ -72,6 +72,7 @@ export const ProductTable = styled.table`
   img {
     height: 100px;
   }
+
   strong {
     color: #333;
     display: block;
@@ -105,6 +106,28 @@ export const ProductTable = styled.table`
     }
     th:first-of-type {
       display: none;
+    }
+  }
+  @media (max-width: 660px) {
+    thead {
+      display: none;
+    }
+    tbody td {
+      padding: 0;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 5px;
+
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 4px;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 `;
