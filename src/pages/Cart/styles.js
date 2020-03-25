@@ -26,6 +26,11 @@ export const Container = styled.div`
       }
     }
   }
+  @media (max-width: 660px) {
+    footer {
+      flex-direction: column-reverse;
+    }
+  }
 `;
 export const EmptyCart = styled.div`
   font-family: sans-serif;
@@ -100,15 +105,8 @@ export const ProductTable = styled.table`
     border: 0;
     padding: 6px;
   }
-  @media (max-width: 768px) {
-    th:last-of-type {
-      display: none;
-    }
-    th:first-of-type {
-      display: none;
-    }
-  }
-  @media (max-width: 660px) {
+
+  @media (max-width: 770px) {
     thead {
       display: none;
     }
